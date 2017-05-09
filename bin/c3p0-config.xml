@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+
+
+	<!-- 
+		关于C3P0配置文件的说明： 
+			1.名称必须是c3p0-config.xml
+			2.放置的位置在src目录下面
+			3.修改配置项(url和password)	
+	-->
+
+	<default-config>
+		<!-- 连接数据库必要的四大参数 -->
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql:///test</property>
+		<property name="user">root</property>
+		<property name="password">root</property>
+		<!-- 初始化连接数 -->
+		<property name="initialPoolSize">5</property>
+		<!-- 最大连接数 -->
+		<property name="maxPoolSize">20</property>
+	</default-config>
+
+	<named-config name="oracle">
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql:///web_07</property>
+		<property name="user">root</property>
+		<property name="password">123</property>
+	</named-config>
+
+
+</c3p0-config>
